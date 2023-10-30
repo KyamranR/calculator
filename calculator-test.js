@@ -16,4 +16,9 @@ it('should handle 3 digit interest rate', function(){
   const values = {amount: 549324, years: 30, rate: 101}
   expect(calculateMonthlyPayment(values)).toEqual('46234.77');
 })
+
+it('should handle low amount', function(){
+  const values = {amount: 1000, years: 30, rate: 2.8}
+  expect(calculateMonthlyPayment(values)).toEqual('4.11');
+})
 /// etc
